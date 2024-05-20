@@ -1,0 +1,18 @@
+{
+    "errorpage": {
+        "heading": "¡Vaya! Parece que hay un problema",
+        "contentHeading": "Parece que algo no funciona correctamente",
+        "content": "Estamos teniendo algunos problemas en estos momentos, pero no se preocupe, estamos solucionándolos. Compruebe el estado de nuestra plataforma aquí, o contacte con el equipo de asistencia si el problema tarda en solucionarse.",
+        "dashboardButton": "Ir al panel de control",
+        "backButton": "Volver"
+    },
+    "PageNotFound": {
+        "heading": "Lo sentimos, se ha producido un error.",
+        "errorGenerated": "Este error ha sido generado por los servidores de SendinBlue.",
+        "wrongUrlEntered": "Si introdujo la dirección URL a mano, compruebe de nuevo si está bien escrita o { contact_support }",
+        "contactSupport": "contacte con el equipo de asistencia",
+        "checkTheService": "Compruebe el estado del servicio { here }",
+        "here": "aquí",
+        "copyright": "2019 Sendinblue"
+    }
+}

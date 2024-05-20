@@ -1,0 +1,18 @@
+{
+    "errorpage": {
+        "heading": "Oops! A quanto pare c'è un problema",
+        "contentHeading": "Sembra che ci sia qualcosa che non va",
+        "content": "Stiamo avendo qualche problema al momento, ma non preoccuparti, ci stiamo lavorando! Controlla qui lo stato della nostra piattaforma oppure contatta l'assistenza se il problema non viene risolto in tempi brevi.",
+        "dashboardButton": "Vai al Dashboard",
+        "backButton": "Indietro"
+    },
+    "PageNotFound": {
+        "heading": "Purtroppo qualcosa è andato storto.",
+        "errorGenerated": "Questo errore è stato generato dai server di SendinBlue.",
+        "wrongUrlEntered": "Se hai inserito l'URL a mano, controlla che sia corretto oppure { contact_support }",
+        "contactSupport": "contatta l'assistenza",
+        "checkTheService": "Controlla lo stato del servizio { here } ",
+        "here": "qui",
+        "copyright": "2019 Sendinblue"
+    }
+}

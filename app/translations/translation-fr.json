@@ -1,0 +1,18 @@
+{
+    "errorpage": {
+        "heading": "Oups ! On dirait qu'il y a un problème",
+        "contentHeading": "Il semble y avoir un problème",
+        "content": "Nous rencontrons actuellement des difficultés. Mais pas d'inquiétude, nous sommes sur l'affaire ! N'hésitez pas à vérifier ici l'état de la plateforme ou à contacter l'assistance si le problème n'est pas résolu rapidement.",
+        "dashboardButton": "Retour au tableau de bord",
+        "backButton": "Retour"
+    },
+    "PageNotFound": {
+        "heading": "Une erreur est survenue.",
+        "errorGenerated": "Cette erreur a été générée par les serveurs de SendinBlue.",
+        "wrongUrlEntered": "Si vous avez entré l'URL à la main, vérifiez si elle est correcte sinon { contact_support }.",
+        "contactSupport": "contactez le support",
+        "checkTheService": "Vérifiez les status de nos services { here }.",
+        "here": "ici",
+        "copyright": "2019 Sendinblue"
+    }
+}

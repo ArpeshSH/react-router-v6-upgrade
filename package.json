@@ -1,0 +1,104 @@
+{
+  "name": "reactboilerplate",
+  "sideEffects": [
+    "*.less"
+  ],
+  "version": "1.0.0",
+  "description": "CHANGEME",
+  "main": "App.js",
+  "engines": {
+    "node": ">=14.15.0",
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.19.1"
+  },
+  "scripts": {
+    "start": "yarn start:boilerplateapp",
+    "start:boilerplate": "APP_ENV=local PUBLIC_PATH=boilerplate PORT=3003 webpack serve --config webpack/webpack.dev.js",
+    "start:boilerplateapp": "APP_ENV=local PUBLIC_PATH=boilerplateapp PORT=8093 webpack serve --config webpack/webpack.dev.js",
+    "build:prod": "webpack --config webpack/webpack.prod.js",
+    "build:dev": "webpack --config webpack/webpack.dev.js",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
+    "lint:fix": "eslint --fix --ext .jsx,.js -c .eslintrc.js \"**/*.{js,jsx}\"",
+    "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --coverage --colors",
+    "bundle:analyze": "BUNDLE_ANALYZE=true yarn build:prod && yarn bundle-report",
+    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
+    "fetchTranslations": "curl -s -H 'CF-Access-Client-ID: 630d62fbf186b3e03f97d60c3a873ea2.access.sendinblue.com' -H 'CF-Access-Client-Secret: eac29251228169404c1c440185e111226fb813ea55b59d1a144d970369dfa46d' 'https://translations.51b.tech/translation/api/download-translation?projectId=PROJECTID' | tar -x --strip-components=2 --directory=app/translations",
+    "updateTranslations": "yarn fetchTranslations && yarn formatTranslations",
+    "prettier": "prettier .",
+    "prettier:fix": "prettier . --write"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "yarn lint"
+    ],
+    "!(*test).js": [
+      "yarn test"
+    ]
+  },
+  "author": "UI Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DTSL/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/DTSL/react-boilerplate#readme",
+  "dependencies": {
+    "@dtsl/react": "^16.4.6",
+    "@dtsl/url-fetch": "1.0.0",
+    "@elastic/apm-rum": "^5.10.2",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@sentry/react": "^5.23.0",
+    "axios": "^1.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.10",
+    "react-intl": "^5.8.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@module-federation/fmr": "0.0.7",
+    "@svgr/webpack": "^6.5.0",
+    "@testing-library/jest-dom": "^5.11.3",
+    "@testing-library/react": "^10.4.8",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.2.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^5.0.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.0.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.1",
+    "jest": "^29.2.1",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "mini-css-extract-plugin": "^1.6.0",
+    "msw": "^0.20.5",
+    "prettier": "^2.2.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-merge": "^5.2.0",
+    "webpackbar": "^4.0.0",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}

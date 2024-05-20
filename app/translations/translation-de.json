@@ -1,0 +1,18 @@
+{
+    "errorpage": {
+        "heading": "Hoppla! Sieht aus, als gäbe es ein Problem.",
+        "contentHeading": "Fehler - Etwas ist schief gelaufen",
+        "content": "Wir haben im Moment einige Probleme. Wir kümmern uns gegenwärtig darum! Sie können den Status unserer Plattform hier überprüfen oder den Support kontaktieren, wenn das Problem nicht bald gelöst wird.",
+        "dashboardButton": "Zum Dashboard",
+        "backButton": "Zurück"
+    },
+    "PageNotFound": {
+        "heading": "Entschuldigung, etwas ist schief gelaufen.",
+        "errorGenerated": "Dieser Fehler wird von Sendinblue-Servern generiert.",
+        "wrongUrlEntered": "Falls Sie die URL manuell eingegeben haben, überprüfen Sie bitte noch einmal, ob sie korrekt ist, oder { contact_support }",
+        "contactSupport": "kontaktieren Sie den Support",
+        "checkTheService": "Überprüfen Sie unseren Service-Status { here }",
+        "here": "hier",
+        "copyright": "2019 Sendinblue"
+    }
+}

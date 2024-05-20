@@ -1,0 +1,37 @@
+name: 'Cloudflare Pages Deployment'
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+    tags-ignore:
+      - '**'
+  pull_request:
+    types: [opened]
+    branches:
+      - dev
+
+  workflow_dispatch:
+    inputs:
+      are_you_sure:
+        description: Are you sure you want to publish this branch/tag?'
+        required: true
+        type: choice
+        options:
+          - yes
+          - no
+
+concurrency:
+  group: ${{'$'}}{{ github.workflow }}-${{'$'}}{{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    uses: 'DTSL/workflows/.github/workflows/cf-pages-deployment.yaml@v1'
+    with:
+      APP_ROUTE_PATH: ''
+      CF_APP_DOMAIN: ${{values.cf_domain}}
+      INSTALL_COMMAND: 'yarn install --frozen-lockfile'
+      BUILD_COMMAND: 'yarn build:prod'
+      PACKAGE_MANAGER: 'yarn'
+    secrets: inherit
